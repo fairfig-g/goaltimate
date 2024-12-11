@@ -3,7 +3,10 @@
 :root {
     --pico-font-family-sans-serif: Tajawal, system-ui, sans-serif, var(--pico-font-family-emoji);  
 }
-  
+nav details.dropdown{
+    display:inline-block;
+    width: 100%;
+}  
 nav details.dropdown summary:not([role]) {
     background: transparent;
     border-color: transparent;
@@ -11,13 +14,17 @@ nav details.dropdown summary:not([role]) {
 }
 nav .spacer{
     width:31px;
-    display:inline-block
+    display:inline-block;
 }
 nav details.dropdown summary:not([role]):hover {
     box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-form-element-focus-color);
 }
 body nav[role=navigation] {
     overflow: visible;
+}
+nav details.dropdown[open] > summary + ul{
+    position: relative;
+    margin-bottom: 1em;
 }
 @media (max-width: 700px) {
     nav[role=navigation][data-breakpoint=md] {
