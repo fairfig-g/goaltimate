@@ -1,0 +1,51 @@
+---
+import LogoSVG from '../assets/images/logo/goaltimate_logo.svg?raw'
+---
+<header class="container pdt-0">
+    <div class="wrapper">
+        <nav role="navigation" data-breakpoint="md">
+            <ul>
+                <li id="logo">
+                    <a href="/" style="height: 4rem;">
+                        <Fragment set:html={LogoSVG} />
+                    </a>
+                </li>
+            </ul>
+            <input type="checkbox" id="hamburger-menu" />
+            <label for="hamburger-menu" style="font-size: calc(var(--pico-font-size) * 1.5);">&#x2261;</label>
+            <ul role="list">
+                <li class="hide-before-sm" role="listitem">
+                    <a class="contrast" data-discover="true" href="/">Home<span class="spacer"></span></a>
+                </li>
+                <li role="listitem">
+                    <details class="dropdown">
+                        <summary style="padding-top: 0.5rem;">Rules</summary>
+                        <ul dir="rtl">
+                            <li><a href="/rules">Official Rules</a></li>
+                            <li><a href="/basics">Basics</a></li>
+                            <li><a href="/rules-for-ultimate-players">Rules for Ultimate players</a></li>
+                        </ul>
+                    </details>
+                </li>	
+                <li role="listitem">
+                    <details class="dropdown">
+                        <summary style="padding-top: 0.5rem;">About</summary>
+                        <ul dir="rtl">
+                            <li><a href="/history">History of Goaltimate</span></a></li>
+                            <li><a href="/about-us">About us</a></li>
+                            <li><a href="/press">For the press</a></li>
+                        </ul>
+                    </details>
+                </li>	
+                <li role="listitem">
+                    <a class="contrast" data-discover="true" href="/contact">Contact</a></li>
+                <li class="icons">
+                    <button id="theme_switcher" style="line-height: 1.25rem; background: transparent; border-style: none; box-shadow: none;"></button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+</header>
+
+

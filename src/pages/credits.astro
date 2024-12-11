@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CreditsContent from '../components/Credits.astro';
+
+const title = "Credits";
+const description = "Credits and copyright attribution for all assets used to build this site";
+const url = "https://goaltimate.org/credits";
+const ogImageSrc = "https://www.goaltimate.org/og_image.jpg";
+---
+
+<Layout description={description} title={title} url={url} ogImageSrc={ogImageSrc}>
+	<CreditsContent />
+</Layout>

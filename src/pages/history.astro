@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HistoryContent from '../components/History.astro'
+
+const title = "History of Goaltimate";
+const description = "A short history of Goaltimate";
+const url = "https://goaltimate.org/history";
+const ogImageSrc = "https://www.goaltimate.org/og_image.jpg";
+---
+
+<Layout description={description} title={title} url={url} ogImageSrc={ogImageSrc}>
+    <div>
+        <HistoryContent />
+    </div>
+</Layout>

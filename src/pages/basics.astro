@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BasicRules from '../components/Basics.astro'
+
+const title = "Basic Rules of Goaltimate";
+const description = "A quik summary of the official rules of Goaltimate - 2025 Edition";
+const url = "https://goaltimate.org/basics";
+const ogImageSrc = "https://www.goaltimate.org/og_image.jpg";
+---
+
+<Layout description={description} title={title} url={url} ogImageSrc={ogImageSrc}>
+    <div>
+        <BasicRules />
+    </div>
+</Layout>

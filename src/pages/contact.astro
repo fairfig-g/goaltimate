@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro'
+
+const title = "Contact us";
+const description = "Contact form to get in touch with the people behind Goaltimate.org";
+const url = "https://goaltimate.org/contact";
+const ogImageSrc = "https://www.goaltimate.org/og_image.jpg";
+---
+
+<Layout description={description} title={title} url={url} ogImageSrc={ogImageSrc}>
+	<ContactForm />
+</Layout>

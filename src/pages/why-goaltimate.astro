@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WhyContent from '../components/Why.astro'
+
+const title = "Why play Goaltimate";
+const description = "Some reasons to play Goaltimate";
+const url = "https://goaltimate.org/why";
+const ogImageSrc = "https://www.goaltimate.org/og_image.jpg";
+---
+
+<Layout description={description} title={title} url={url} ogImageSrc={ogImageSrc}>
+    <div>
+        <WhyContent />
+    </div>
+</Layout>
