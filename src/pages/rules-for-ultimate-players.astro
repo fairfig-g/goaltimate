@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import RulesUltimate from '../components/RulesUltimate.astro'
 
-import {Content as RulesMD} from '../assets/content/ultimate.md'
 const title = "Rules of Goaltimate for Ultimate players";
 const description = "A summary of the rules of Goaltimate for Ultimate players";
 const url = "https://goaltimate.org/rules-for-ultimate-players";
@@ -10,6 +10,6 @@ const ogImageSrc = "https://www.goaltimate.org/og_image.jpg";
 
 <Layout description={description} title={title} url={url} ogImageSrc={ogImageSrc}>
 	<div>
-        <RulesMD />
+        <RulesUltimate />
     </div>
 </Layout>
