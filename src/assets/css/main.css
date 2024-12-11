@@ -113,22 +113,20 @@ ul.nolist li{
 
 
 /* Dark color scheme (auto if set in browser preferences)*/
-@media only screen and (prefers-color-scheme: dark) {
-    [data-theme=dark],
-    :root:not([data-theme]) {
-        --pico-text-selection-color: #08489B;
-        --pico-primary: #FF4198;
-        --pico-primary-background: #FF4198;
-        --pico-primary-underline: rgba(255, 65, 152, 0.5);
-        --pico-contrast-hover-underline: #FF4198;
-        --pico-primary-hover: #FF0A78;
-        --pico-primary-hover-background: #FF4198;
-        --pico-primary-focus: rgba(3, 2, 2, 0.5);
-        --pico-primary-inverse: #fff;
-        --outline-color: #f79fc6;
-        --pico-color: #fff;
-        --accent: #fdc802;
-  }
+[data-theme=dark],
+:root:not([data-theme]) {
+    --pico-text-selection-color: #08489B;
+    --pico-primary: #FF4198;
+    --pico-primary-background: #FF4198;
+    --pico-primary-underline: rgba(255, 65, 152, 0.5);
+    --pico-contrast-hover-underline: #FF4198;
+    --pico-primary-hover: #FF0A78;
+    --pico-primary-hover-background: #FF4198;
+    --pico-primary-focus: rgba(3, 2, 2, 0.5);
+    --pico-primary-inverse: #fff;
+    --outline-color: #f79fc6;
+    --pico-color: #fff;
+    --accent: #fdc802;
 }
 
 html[data-theme='dark'] {
