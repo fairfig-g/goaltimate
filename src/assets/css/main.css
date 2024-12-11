@@ -22,13 +22,14 @@ nav details.dropdown summary:not([role]):hover {
 body nav[role=navigation] {
     overflow: visible;
 }
-nav details.dropdown[open] > summary + ul{
-    position: relative;
-    margin-bottom: 1em;
-}
+
 @media (max-width: 700px) {
     nav[role=navigation][data-breakpoint=md] {
         overflow: hidden;
+    }
+    nav details.dropdown[open] > summary + ul{
+        position: relative;
+        margin-bottom: 1em;
     }
 }
 
