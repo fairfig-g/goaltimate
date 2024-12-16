@@ -10,39 +10,75 @@
     </div>
 </section>
 <section>
-    <form>
+    <form method="POST" id="contactForm">
         <fieldset>
-          <label>
-            Your name
-            <input
+          <label for="name">Your name</label>
+          <input
+              id="name"
               name="name"
               placeholder="Stay Awesome"
               autocomplete="name"
+              required
             />
-          </label>
-          <label>
-            Email
-            <input
-              type="email"
-              name="email"
-              placeholder="stayawesome@goaltimate.org"
-              autocomplete="email"
-            />
-          </label>
-          <label>
-            Your message
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="stayawesome@goaltimate.org"
+            autocomplete="email"
+            required
+          />
+
+          <label for="message">Your message</label>
             <textarea
-            name="message"
-            placeholder="Your message here..."
-            aria-label="Message"
-            >
-            </textarea>
-          </label>  
+              rows="6"
+              id="message"
+              name="message"
+              placeholder="Your message here..."
+              aria-label="Message"
+              required
+            ></textarea>  
         </fieldset>
-      
+
         <input
+          id="submit"
           type="submit"
           value="Send"
         />
       </form>
 </section>
+<script>
+  window.addEventListener("load", function () {
+  const form = document.getElementById("contactForm") as HTMLFormElement;
+  const submit = document.getElementById("submit")!;
+  const url ="https://script.google.com/macros/s/AKfycbwASxm4c-ObDWn5Bv3UN-5qvOQ-bFUtFT7qHMguwIf-3dtdNdxf_4-khhzkE2AX_T_7/exec"
+  console.log('aaa');
+  if(form && submit){
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      submit.setAttribute('value', "Sending... ⏱️");
+      submit.setAttribute("class", "sending");
+      const data = new FormData(form);
+      fetch(url, {
+        method: "POST",
+        body: data
+      })
+        .then((response) => {
+          if (response.ok) {
+            form.reset();
+            submit.setAttribute('value',"Sent!");
+            submit.setAttribute("class", "success");
+          } else {
+            submit.setAttribute('value',"Error");
+            submit.setAttribute("class", "error");
+          }
+        })
+        .catch((error) => {
+          console.log("An error occurred: " + error.message);
+        });
+    });
+  }
+  
+});
+</script>

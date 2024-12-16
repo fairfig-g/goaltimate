@@ -109,6 +109,8 @@ ul.nolist li{
     --outline-color: #f79fc6;
     --pico-color: #000;
     --accent: #FFD300;
+    --error: red;
+    --success: #02cc93;
 }
 
 
@@ -127,16 +129,48 @@ ul.nolist li{
     --outline-color: #f79fc6;
     --pico-color: #fff;
     --accent: #fdc802;
+    --error: red;
+    --success: #02cc93;
 }
-
+html [type=submit] {
+    border: 0.25rem solid transparent;
+    line-height: 1rem;
+}
 html[data-theme='light'] [type=submit] {
     color: #fff;
 }
+@property --border-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+@keyframes border-angle-rotate {
+    from { --border-angle: 0deg; }
+    to { --border-angle: 360deg; }
+}
+input.sending[type=submit]{ 
+    --border-angle: 0deg;
+    animation: border-angle-rotate 2s infinite linear;
+    background: linear-gradient(var(--pico-primary-background), var(--pico-primary-background)) padding-box, 
+        conic-gradient(from var(--border-angle), var(--pico-primary-background) 50%, transparent) border-box;
+}
+input.success[type=submit]{ 
+    background:var(--success);
+}
+input.error[type=submit]{ 
+    background: var(--error);
+}
+
+
 
 html [type=submit]:hover, html button:hover {
     background-color: var(--pico-primary-hover-background);
 }
-
+label:has(+ input:required):after,
+label:has(+ textarea:required):after{
+    content: ' *';
+    color: var(--error);
+  }
 
 html[data-theme='dark'] {
     background: #0F172A;
