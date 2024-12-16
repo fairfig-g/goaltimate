@@ -19,10 +19,18 @@ nav details.dropdown summary:not([role]):hover {
 body nav[role=navigation] {
     overflow: visible;
 }
+nav .simple-nav{
+    border: var(--pico-border-width) solid transparent;
+    height: calc(1rem* var(--pico-line-height) + var(--pico-nav-link-spacing-vertical)* 2);
+    padding: calc(var(--pico-nav-link-spacing-vertical) - var(--pico-border-width)* 2) var(--pico-nav-link-spacing-horizontal);
+    display: block;
+}
 .media{
-    width: 98vh;
-    padding: 0 inherit;
-    margin: 0 1vw;
+    width: calc(100vw - 2 * var(--pico-spacing) );
+    padding: 0 0;
+}
+.youtube{
+    height: calc( ( 100vw - 2 * var(--pico-spacing) ) * 315 / 560 );
 }
 #content{
     min-height: calc(100vh - 8rem - 159px)
@@ -133,7 +141,7 @@ ul.nolist li{
     --success: #02cc93;
 }
 html [type=submit] {
-    border: 0.25rem solid transparent;
+    border: 0.125rem solid transparent;
     line-height: 1rem;
 }
 html[data-theme='light'] [type=submit] {
