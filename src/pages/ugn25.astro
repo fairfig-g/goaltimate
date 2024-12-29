@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Ugn25Content from '../components/ugn25.astro'
+
+const title = "UK Goaltimate National 2025";
+const description = "UK Goaltimate National 2025 - all you need to know";
+const url = "https://goaltimate.org/ugn25";
+const ogImageSrc = "https://www.goaltimate.org/og_image.jpg";
+---
+
+<Layout description={description} title={title} url={url} ogImageSrc={ogImageSrc}>
+    <div>
+        <Ugn25Content />
+    </div>
+</Layout>
