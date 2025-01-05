@@ -105,6 +105,33 @@ ul.nolist li{
     margin-bottom: 0.5rem;
 }
 
+ol.use-counters, 
+ol.use-counters ol{
+    counter-reset: section;
+    list-style-type: none;
+    position: relative;
+    padding-left: 0;
+}
+ol.use-counters li {padding-left: 2.5rem;}
+ol.use-counters ol li {padding-left: 2.5rem;}
+ol.use-counters ol li li {padding-left: 3rem;}
+ol.use-counters ol li li li {padding-left: 3.5rem;}
+ol.use-counters ol li li li li {padding-left: 4.5rem;}
+ol.use-counters ol li li li li li {padding-left: 5rem;}
+
+ol.use-counters li:before{
+    counter-increment: section;
+    content: counters(section, ".") ". ";
+    position: absolute;
+    left: 0;
+    opacity: 0.6;
+}
+ol.use-counters ul.no-counters-increment {
+    counter-reset: inherit;
+}
+ol.use-counters ul.no-counters-increment li:before {
+    display: none;
+}
 /* Light color scheme (default)*/
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
