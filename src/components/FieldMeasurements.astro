@@ -2,11 +2,19 @@
 import FieldOne from '../assets/images/goaltimate_field_measurements.svg?raw'
 import FieldTwo from '../assets/images/goaltimate_field_measurements2.svg?raw'
 ---
-<div id="field-measurement-wrapper" class="grid">
+<div id="field-measurement-wrapper" class="grid" style="justify-items: center;max-width: 1070px;">
     <div class="center-m media" style="max-width:570px;">
         <Fragment set:html={FieldOne} />
     </div>
-    <div class="center-m">
+    <div class="center-m"style="max-width:320px;">
         <Fragment set:html={FieldTwo} />
     </div>
 </div>
+<style>
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;       
+    }
+}
+</style>
