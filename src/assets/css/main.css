@@ -105,6 +105,10 @@ ul.nolist li{
     margin-bottom: 0.5rem;
 }
 
+.tab-va td{
+    vertical-align: top;
+}
+
 /* Light color scheme (default)*/
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
