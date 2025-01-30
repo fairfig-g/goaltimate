@@ -87,8 +87,8 @@ import FieldMeasurement from './FieldMeasurements.astro'
         </ol>
         <li id="7.6">If the pull hits the goal pole, the pulling team gets possession of the disc.</li>
         <ol>
-            <li id="7.6.1">The team receiving the pull cannot touch the pull anymore.</li>
-            <li id="7.6.2">The pulling team restarts the game as if a turnover by the receiving team had occurred.</li>
+            <li id="7.6.1">The team receiving the pull cannot touch the disc anymore.</li>
+            <li id="7.6.2">The pulling team restarts the game as they would do after a turnover by the receiving team.</li>
         </ol>    
         <li id="7.7">As soon as the pull is released, all players may move in any direction. 
         <li id="7.8">The pull cannot be touched until when it hits the ground or flies past the goal plane.</li>
@@ -138,6 +138,9 @@ import FieldMeasurement from './FieldMeasurements.astro'
     <ol>
         <li id="9.1">Any player on the team in defence can administers a stall count on the thrower by announcing “Stalling” and then counting from one (1) to five (5). The interval between the start of each number in the stall count must be at least one (1) second. </li>
         <li id="9.2">The stall count must be clearly communicated to the thrower. </li>
+        <ol>
+            <li id="9.2.1">If multiple players are stall counting, the last one to start is the one that applies, the earlier stall counts have no effect on the play.</li>
+        </ol>
         <li id="9.3">The player administering the stall may only start and continue a stall count when:</li> 
         <ol>
             <li id="9.3.1">Play is live, or once a pivot point is established after a turnover; </li>
@@ -279,12 +282,16 @@ import FieldMeasurement from './FieldMeasurements.astro'
         <li id="13.2">A turnover that transfers possession of the disc from one team to the other, and results in a stoppage of play, occurs when: </li>
         <ol>
             <li id="13.2.1">there is an accepted offensive receiving foul; </li>
-            <li id="13.2.2">the thrower has not released the pass before the player administering teh stall first starts to say the word “five” in the stall count (a “stall-out”); </li>
+            <li id="13.2.2">the thrower has not released the pass before the player administering the stall first starts to say the word “five” in the stall count (a “stall-out”); </li>
             <li id="13.2.3">the disc is intentionally transferred from one offensive player to another without ever being completely untouched by both players (a “handover”); </li>
             <li id="13.2.4">the thrower intentionally deflects a pass to themselves off another player (a “deflection”); </li>
             <li id="13.2.5">in attempting a pass, the thrower catches the disc after release prior to the disc being contacted by another player (a “self-catch”); </li>
             <li id="13.2.6">an offensive player intentionally assists a team-mate's movement to catch a pass; or </li>
             <li id="13.2.7">an offensive player uses an item of equipment or object to assist in catching a pass. </li>
+            <li id="13.2.8">an offensive player passes the disc through the goal from the side with the goal zone (a "backward throw")</li>
+            <ol>
+                <li id="13.2.8.1">After a backward throw, play restarts where the disc crossed the goal plane. The team in possession can choose to restart on either side of the goal plane by setting their pivot foot fully on one side or the other.</li>
+            </ol>
         </ol>
         <li id="13.3">If a player determines a turnover has occurred they must make the appropriate call immediately. If the opposition disagrees they may call “contest” and play must stop. If, after discussion, players cannot agree or it is unclear what occurred in the play, the disc must be returned to the last non-disputed thrower. </li>
         <li id="13.4">After a “stall-out” call: </li>
@@ -315,7 +322,7 @@ import FieldMeasurement from './FieldMeasurements.astro'
         <li id="13.10">If, after an accepted turnover, play has continued unknowingly, play stops and the disc is returned to the turnover location, players resume their positions at the time the turnover occurred and play restarts with a check. </li>
         <li id="13.11">If a player has a non-minor contact with the goal, this is treated as a foul (“Goal foul”).</li>
         <ol>
-            <li id="13.11.2">If needed, play stops to fix the goal/ If the fould did not affect teh play, the game continues from where it stopped. If it affected the game, the team that did not cause teh foul can choose to go back to previous uncontested possession.</li>
+            <li id="13.11.2">If needed, play stops to fix the goal/ If the fould did not affect the play, the game continues from where it stopped. If it affected the game, the team that did not cause the foul can choose to go back to previous uncontested possession.</li>
             <li id="13.11.1">It is expected by all players to prioritise avoiding contact with other players. If a player has to hit the goal to avoid contact with another players, the player that forced this movement fouled the attacking player by causing a contact that cannot be avoided in a legal way.</li>
         </ol>
         <li id="13.12">When there is a turnover, the players in the offense that just lost the possession need to fairly establish who is responsible for the turnover.</li>
@@ -334,10 +341,16 @@ import FieldMeasurement from './FieldMeasurements.astro'
         <li id="14.1">A goal is scored if a player in the goal zone catches a legal assist (a disc that flew entirely unaided threw the goal from the playing area) and: </li>
         <ol>
             <li id="14.1.1">all their ground contacts are entirely within the goal zone, or for an airborne player, all of their first simultaneous points of ground contact after catching the disc are entirely within the goal zone, and </li>
-            <li id="14.1.2">they subsequently establish possession of the disc, and maintain the catch throughout all ground contact related to the catch. </li>
+            <li id="14.1.2">they subsequently establish possession of the disc, and maintain the catch throughout all ground contact related to the catch</li>
+            <li id="14.1.3">the disc has been "cleared" by the team having possession of the disc by establish possession in the clear box after picking up the disc or scoring a point</li>
+            <li id="14.1.4">the disc was not pushed or pulled through the goal plane.</li>
+            <ol>
+                <li id="14.1.3.1">If the disc did fly unasided through the goal call "Through". It is not a goal, but the pass is valid and play continues without interruption.</li>
+            </ol>
         </ol>
         <li id="14.2">If a player believes a goal has been scored, they may call “goal”. Play does not stop. After a contested or retracted goal call play must restart with a check and the call is deemed to have been made when the player established possession. </li>
         <li id="14.3">The time at which a goal is deemed to have been scored is when the player established possession. </li>
+        <li id="14.4">Scoring on an assist from the clear box gives you 2 points instead of 1. </li>
     </ol>
 
 
